@@ -1,11 +1,15 @@
 import Banner from 'components/Banner/Banner'
 import s from './page.module.scss'
+import Profile from 'components/Profile/Profile'
 
 const Home = () => {
 	return (
-		<main className={s.home__main}>
-			<Banner />
-		</main>
+		<div className={s.home}>
+			<main className={s.home__main}>
+				<Profile />
+				<Banner />
+			</main>
+		</div>
 	)
 }
 

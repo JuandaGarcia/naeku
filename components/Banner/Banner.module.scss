@@ -1,4 +1,5 @@
 .banner {
+	height: max-content;
 	padding: 20px 24px;
 	border-radius: 16px;
 	background-color: var(--primary-color);
@@ -25,21 +26,21 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		animation: pattern 0.5s;
+		animation: pattern 1s ease-out;
 		pointer-events: none;
 	}
 	&__text1 {
-		font-size: 12px;
+		font-size: 0.75rem;
 		font-weight: 300;
-		line-height: 14.4px;
+		line-height: 0.9rem;
 		margin-bottom: 17px;
 		position: relative;
 		z-index: 1;
 	}
 	&__text2 {
-		font-size: 24px;
+		font-size: 1.5rem;
 		font-weight: 800;
-		line-height: 28.8px;
+		line-height: 1.8rem;
 		margin-bottom: 16px;
 		max-width: 325px;
 		position: relative;
@@ -48,11 +49,6 @@
 	&__cta {
 		@mixin cta-color-item($opacity: 1) {
 			background-color: rgba(1, 37, 140, $opacity);
-		}
-		@keyframes banner_cta_item {
-			from {
-				width: 100%;
-			}
 		}
 		$transition: 0.3s;
 		display: flex;
@@ -72,7 +68,6 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			animation: banner_cta_item $transition;
 			@include cta-color-item(0.6);
 		}
 		&:hover {
@@ -93,10 +88,9 @@
 			border-radius: inherit;
 			transition: width $transition;
 			z-index: 1;
-			font-size: 12px;
+			font-size: 0.75rem;
 			font-weight: 600;
-			line-height: 14.52px;
-			animation: banner_cta_item $transition;
+			line-height: 0.9075rem;
 			@include cta-color-item();
 		}
 	}

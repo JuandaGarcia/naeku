@@ -1,0 +1,98 @@
+@import '../../styles/responsive';
+
+.profile {
+	display: grid;
+	justify-items: center;
+	gap: 32px;
+	grid-auto-rows: max-content;
+	min-height: 100%;
+	padding: 32px 24px;
+	border-radius: 20px;
+	box-shadow: 0px 14px 25px 0px rgba(8, 15, 52, 0.059);
+	text-align: center;
+	&__title {
+		width: 100%;
+		font-size: 1.125rem;
+		font-weight: 700;
+		line-height: 1.35rem;
+		text-align: left;
+	}
+	&__photo {
+		margin-bottom: 22px;
+		padding: 10px;
+		border: 10px solid var(--primary-color);
+		width: max-content;
+		border-radius: 50%;
+		background: none;
+		&__img {
+			object-fit: cover;
+			border-radius: 50%;
+			box-shadow: 0px 25.63px 76.9px 0px rgba(20, 20, 43, 0.161);
+			vertical-align: top;
+		}
+	}
+	&__name {
+		margin-bottom: 11px;
+		font-size: 1.375rem;
+		font-weight: 500;
+		line-height: 1.65rem;
+		color: #011243;
+	}
+	&__badge {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 21px;
+		padding: 0 17px;
+		border-radius: 11px;
+		background: rgba(6, 70, 254, 0.2);
+		text-transform: uppercase;
+		font-size: 0.7119rem;
+		font-weight: 400;
+		line-height: 0.8619rem;
+		text-align: left;
+		color: var(--primary-color);
+		width: max-content;
+	}
+	&__subtitle {
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 1.5rem;
+		color: #011243;
+	}
+	&__summary {
+		display: grid;
+		gap: 12px;
+		&__items {
+			display: grid;
+			gap: inherit;
+			grid-template-columns: repeat(3, 1fr);
+			@include desktop {
+				grid-template-columns: 1fr;
+			}
+			&__item {
+				display: grid;
+				gap: 10px;
+				padding: 16px 0;
+				&__value {
+					font-size: 1.875rem;
+					font-weight: 700;
+					line-height: 2.25rem;
+					color: var(--primary-color);
+				}
+				&__label {
+					font-size: 0.75rem;
+					font-weight: 400;
+					line-height: 0.9rem;
+					color: #242731;
+				}
+			}
+		}
+	}
+	&__collaborators {
+		display: grid;
+		width: max-content;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+}

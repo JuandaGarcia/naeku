@@ -1,5 +1,20 @@
+@import '../styles/responsive';
+
 .home {
+	min-height: 100vh;
+	background-color: var(--background);
+	@include desktop {
+		padding-right: 20px;
+	}
 	&__main {
+		display: grid;
+		gap: 20px;
+		min-height: 100vh;
+		max-width: 1307px;
+		margin: 0 auto;
 		padding: 40px 20px;
+		@include desktop {
+			grid-template-columns: 305px 1fr;
+		}
 	}
 }
