@@ -32,3 +32,13 @@ button:focus-visible {
 	box-shadow: 0 0 0 2px var(--primary-color);
 	transition: 0.2s;
 }
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary-color);
+	border-radius: 1rem;
+}

@@ -1,6 +1,6 @@
 import { PropsWithChildren, useEffect, useState } from 'react'
 import s from './Modal.module.scss'
-import Close from 'components/icons/Close'
+import Close from 'components/ui/icons/Close'
 import { createPortal } from 'react-dom'
 
 type Props = {

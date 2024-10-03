@@ -1,4 +1,4 @@
-import Arrow from 'components/icons/Arrow'
+import Arrow from 'components/ui/icons/Arrow'
 import s from './Banner.module.scss'
 
 const Banner = () => {

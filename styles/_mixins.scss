@@ -1,0 +1,16 @@
+@mixin profile-image($boderSize: 10px, $shadow: false) {
+	padding: $boderSize;
+	border: $boderSize solid var(--primary-color);
+	width: max-content;
+	height: max-content;
+	border-radius: 50%;
+	background: none;
+	&__img {
+		object-fit: cover;
+		border-radius: 50%;
+		@if ($shadow) {
+			box-shadow: 0px 25.63px 76.9px 0px rgba(20, 20, 43, 0.161);
+		}
+		vertical-align: top;
+	}
+}

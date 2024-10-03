@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import s from './Profile.module.scss'
 import MotionNumber from 'motion-number'
 import ASCII from 'utils/ASCII'
+import Collaborator from 'components/Collaborator/Collaborator'
 
 const Profile = () => {
 	const [minutes, setMinutes] = useState(3785)
@@ -59,8 +60,47 @@ const Profile = () => {
 					</div>
 				</dl>
 			</div>
-			<p className={s.profile__subtitle}>Colaboradores</p>
-			<div className={s.profile__collaborators}></div>
+			<div className={s.profile__collaborators}>
+				<p className={s.profile__subtitle}>Colaboradores</p>
+				<div className={s.profile__collaborators__items}>
+					<Collaborator
+						name="Jessi Uribe"
+						photo="/img/jessi_uribe.png"
+						tracks={[
+							{ title: 'La Conquista', artists: 'Jessi Uribe y Paola Jara' },
+							{ title: 'Como Si Nada', artists: 'Jessi Uribe y Paola Jara' },
+							{ title: 'Amor De Mi Vida', artists: 'Jessi Uribe y Paola Jara' },
+						]}
+					/>
+					<Collaborator
+						name="Pipe Bueno"
+						photo="/img/pipe_bueno.png"
+						tracks={[
+							{
+								title: 'Usted No Me Olvida',
+								artists: 'Joaquin Guiller x Pipe Bueno x Paola Jara x Jhonny R',
+							},
+							{
+								title: 'No Me Digas Que No',
+								artists: 'Pipe Bueno x Luis Alfonso',
+							},
+							{
+								title: 'Te Hubieras Ido Antes',
+								artists: 'Pipe Bueno',
+							},
+						]}
+					/>
+					<Collaborator
+						name="Alzate"
+						photo="/img/alzate.png"
+						tracks={[
+							{ title: 'Amor Eterno', artists: 'Alzate x Paola Jara' },
+							{ title: 'Voy a Beber', artists: 'Alzate' },
+							{ title: 'Maldita Traición', artists: 'Alzate' },
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 	)
 }
