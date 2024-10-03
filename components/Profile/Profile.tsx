@@ -4,6 +4,7 @@ import s from './Profile.module.scss'
 import MotionNumber from 'motion-number'
 import ASCII from 'utils/ASCII'
 import Collaborator from 'components/Collaborator/Collaborator'
+import Camera from 'components/ui/icons/Camera'
 
 const Profile = () => {
 	const [minutes, setMinutes] = useState(3785)
@@ -31,6 +32,9 @@ const Profile = () => {
 						height={102}
 						className={s.profile__photo__img}
 					/>
+					<div className={s.profile__photo__camera}>
+						<Camera />
+					</div>
 				</button>
 				<p className={s.profile__name}>Paola Jara</p>
 				<p className={s.profile__badge}>ARTISTA</p>

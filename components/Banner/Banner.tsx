@@ -1,5 +1,6 @@
 import Arrow from 'components/ui/icons/Arrow'
 import s from './Banner.module.scss'
+import Link from 'next/link'
 
 const Banner = () => {
 	return (
@@ -8,11 +9,11 @@ const Banner = () => {
 			<p className={s.banner__text2}>
 				Conviértete en un tiburón, Lleva tu música a la superficie
 			</p>
-			<a href="#" className={s.banner__cta}>
+			<Link href="/" className={s.banner__cta}>
 				<span className={s.banner__cta__content}>
 					Ir a mi ruta <Arrow />
 				</span>
-			</a>
+			</Link>
 		</section>
 	)
 }
