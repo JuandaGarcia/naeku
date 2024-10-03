@@ -50,7 +50,7 @@
 		@mixin cta-color-item($opacity: 1) {
 			background-color: rgba(1, 37, 140, $opacity);
 		}
-		$transition: 0.3s;
+		--cta-transition: 0.3s;
 		display: flex;
 		width: 134px;
 		height: 36px;
@@ -64,7 +64,7 @@
 			width: 93.28%;
 			height: 100%;
 			border-radius: inherit;
-			transition: width $transition;
+			transition: width var(--cta-transition);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -86,7 +86,7 @@
 			width: 85.07%;
 			height: 100%;
 			border-radius: inherit;
-			transition: width $transition;
+			transition: width var(--cta-transition);
 			z-index: 1;
 			font-size: 0.75rem;
 			font-weight: 600;

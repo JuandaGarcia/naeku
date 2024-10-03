@@ -10,7 +10,7 @@ const Profile = () => {
 	useEffect(() => {
 		// Simulate number increment
 		const interval = setInterval(() => {
-			setMinutes(prev => prev + 5)
+			setMinutes(prev => prev + 3)
 		}, 5000)
 
 		// Display ASCII art (See the Console in Browser)!
@@ -19,7 +19,7 @@ const Profile = () => {
 	}, [])
 
 	return (
-		<div className={s.profile}>
+		<section className={s.profile}>
 			<h2 className={s.profile__title}>Tu Perfil</h2>
 			<div>
 				<button className={s.profile__photo}>
@@ -36,32 +36,32 @@ const Profile = () => {
 			</div>
 			<div className={s.profile__summary}>
 				<p className={s.profile__subtitle}>Resumen de estadísticas</p>
-				<div className={s.profile__summary__items}>
+				<dl className={s.profile__summary__items}>
 					<div className={s.profile__summary__items__item}>
-						<p className={s.profile__summary__items__item__value}>
-							<MotionNumber value={minutes} locales="es" />
-						</p>
-						<p className={s.profile__summary__items__item__label}>
+						<dt className={s.profile__summary__items__item__label}>
 							Minutos escuchados
-						</p>
+						</dt>
+						<dd className={s.profile__summary__items__item__value}>
+							<MotionNumber value={minutes} locales="es" />
+						</dd>
 					</div>
 					<div className={s.profile__summary__items__item}>
-						<p className={s.profile__summary__items__item__value}>57</p>
-						<p className={s.profile__summary__items__item__label}>
+						<dt className={s.profile__summary__items__item__label}>
 							Pistas de audio
-						</p>
+						</dt>
+						<dd className={s.profile__summary__items__item__value}>57</dd>
 					</div>
 					<div className={s.profile__summary__items__item}>
-						<p className={s.profile__summary__items__item__value}>9</p>
-						<p className={s.profile__summary__items__item__label}>
+						<dt className={s.profile__summary__items__item__label}>
 							Artistas colaboradores
-						</p>
+						</dt>
+						<dd className={s.profile__summary__items__item__value}>9</dd>
 					</div>
-				</div>
+				</dl>
 			</div>
 			<p className={s.profile__subtitle}>Colaboradores</p>
 			<div className={s.profile__collaborators}></div>
-		</div>
+		</section>
 	)
 }
 

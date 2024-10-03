@@ -1,0 +1,40 @@
+@import '../../styles/responsive';
+
+.form {
+	display: grid;
+	gap: 24px;
+	justify-items: flex-end;
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr;
+		column-gap: 32px;
+		row-gap: 24px;
+		width: 100%;
+		padding: 24px;
+		padding-bottom: 38px;
+		border-radius: 10px;
+		background-color: rgb(191, 210, 254, 0.2);
+		@include desktop {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+.modal {
+	display: grid;
+	justify-items: center;
+	text-align: center;
+	gap: 24px;
+	&__title {
+		font-size: 1.125rem;
+		font-weight: 900;
+		line-height: 1.375rem;
+		color: var(--primary-color);
+	}
+	&__text {
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.25rem;
+		color: #71839b;
+	}
+}

@@ -16,5 +16,10 @@
 		@include desktop {
 			grid-template-columns: 305px 1fr;
 		}
+		&__content {
+			display: grid;
+			gap: 24px;
+			height: max-content;
+		}
 	}
 }

@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.3",
     "motion-number": "^0.1.7",
     "next": "14.2.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.53.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.11",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",

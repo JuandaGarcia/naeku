@@ -20,7 +20,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es">
-			<body className={`${lato.className}`}>{children}</body>
+			<body className={`${lato.className}`}>
+				{children}
+				<div id="modals" />
+			</body>
 		</html>
 	)
 }

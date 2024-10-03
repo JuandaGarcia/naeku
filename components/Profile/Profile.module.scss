@@ -67,11 +67,13 @@
 			display: grid;
 			gap: inherit;
 			grid-template-columns: repeat(3, 1fr);
+			align-items: flex-start;
 			@include desktop {
 				grid-template-columns: 1fr;
 			}
 			&__item {
-				display: grid;
+				display: flex;
+				flex-direction: column-reverse;
 				gap: 10px;
 				padding: 16px 0;
 				&__value {
