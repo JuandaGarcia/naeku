@@ -1,10 +1,15 @@
 @mixin profile-image($boderSize: 10px, $shadow: false) {
-	padding: $boderSize;
-	border: $boderSize solid var(--primary-color);
+	margin: $boderSize;
+	border: $boderSize solid transparent;
 	width: max-content;
 	height: max-content;
 	border-radius: 50%;
 	background: none;
+	transition: 0.2s;
+	box-shadow: 0 0 0 $boderSize var(--primary-color);
+	&:hover {
+		box-shadow: 0 0 0 calc(#{$boderSize} * 1.5) var(--primary-color);
+	}
 	&__img {
 		object-fit: cover;
 		border-radius: 50%;
