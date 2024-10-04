@@ -6,7 +6,7 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
-		height: 28px;
+		height: 60px;
 		padding: 0 24px;
 		position: relative;
 		font-size: 0.875rem;
@@ -16,6 +16,9 @@
 		cursor: pointer;
 		color: var(--text-9);
 		transition: 0.2s;
+		@include desktop {
+			height: 28px;
+		}
 		&.active {
 			color: var(--primary-color);
 			font-weight: 700;
