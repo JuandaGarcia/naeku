@@ -19,3 +19,20 @@
 		vertical-align: top;
 	}
 }
+
+@mixin input-base {
+	--error-color: #fc3133;
+	display: grid;
+	gap: 6px;
+	height: max-content;
+	&__label,
+	&__error {
+		font-size: 0.75rem;
+		font-weight: 400;
+		color: #242731;
+		line-height: 0.8938rem;
+	}
+	&__error {
+		color: var(--error-color);
+	}
+}

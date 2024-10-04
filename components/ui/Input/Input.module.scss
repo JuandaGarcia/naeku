@@ -1,16 +1,9 @@
+@import '../../../styles/mixins';
+
 .input {
-	--error-color: #fc3133;
-	display: grid;
-	gap: 6px;
-	height: max-content;
-	&__label,
-	&__error {
-		font-size: 0.75rem;
-		font-weight: 400;
-		color: #242731;
-		line-height: 0.8938rem;
-	}
+	@include input-base;
 	&__element {
+		width: 100%;
 		padding: 0 13px;
 		min-height: 35px;
 		border-radius: 4px;
@@ -19,11 +12,9 @@
 		font-weight: 1.3938rem;
 		background: transparent;
 		color: #242731;
+		font-family: inherit;
 		&::placeholder {
 			color: #71839b;
 		}
-	}
-	&__error {
-		color: var(--error-color);
 	}
 }

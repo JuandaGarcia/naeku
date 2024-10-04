@@ -1,0 +1,10 @@
+@import '../../../styles/mixins';
+
+.select {
+	@include input-base;
+	input {
+		&:focus-visible {
+			box-shadow: none;
+		}
+	}
+}
