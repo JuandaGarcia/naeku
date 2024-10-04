@@ -11,10 +11,7 @@
 		font-size: 0.875rem;
 		font-weight: 1.3938rem;
 		background: transparent;
-		color: #242731;
 		font-family: inherit;
-		&::placeholder {
-			color: #71839b;
-		}
+		color: var(--text-9);
 	}
 }

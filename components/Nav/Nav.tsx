@@ -11,11 +11,15 @@ import Statistics from 'components/ui/icons/Statistics'
 import Question from 'components/ui/icons/Question'
 import Exit from 'components/ui/icons/Exit'
 import Sun from 'components/ui/icons/Sun'
+import { useTheme } from 'next-themes'
 
 const Nav = () => {
 	const [isOpen, setIsOpen] = useState(false)
+	const { theme, setTheme } = useTheme()
 
 	const toggleMenu = () => setIsOpen(!isOpen)
+	const toggleTheme = () =>
+		theme === 'dark' ? setTheme('light') : setTheme('dark')
 
 	return (
 		<>
@@ -63,8 +67,11 @@ const Nav = () => {
 					<Link href="/#help" className={s.nav__section__item}>
 						<Question /> <span className={s.hide}>Centro de ayuda</span>
 					</Link>
-					<button className={s.nav__section__item}>
-						<Sun /> <span className={s.hide}>Cambiar a modo oscuro</span>
+					<button className={s.nav__section__item} onClick={toggleTheme}>
+						<Sun />{' '}
+						<span className={s.hide}>
+							Cambiar a modo {theme === 'dark' ? 'claro' : 'oscuro'}
+						</span>
 					</button>
 					<button className={s.nav__section__item}>
 						<Exit /> <span className={s.hide}>Salir</span>

@@ -3,7 +3,7 @@
 	padding: 20px 24px;
 	border-radius: 16px;
 	background-color: var(--primary-color);
-	color: var(--background);
+	color: var(--text-1);
 	position: relative;
 	overflow: hidden;
 	&::before {
@@ -60,7 +60,7 @@
 		@include cta-color-item(0.4);
 		&:focus-visible {
 			outline: none;
-			box-shadow: 0 0 0 2px var(--background);
+			box-shadow: 0 0 0 2px var(--text-1);
 			transition: 0.2s;
 		}
 		&::before {

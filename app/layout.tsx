@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
 import './globals.scss'
 
 const lato = Lato({
@@ -21,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="es">
 			<body className={`${lato.className}`}>
-				{children}
+				<ThemeProvider defaultTheme="light">{children}</ThemeProvider>
 				<div id="modals" />
 			</body>
 		</html>

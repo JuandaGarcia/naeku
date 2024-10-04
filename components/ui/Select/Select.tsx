@@ -12,7 +12,20 @@ const Select = forwardRef<any, SelectProps>(
 		return (
 			<label className={s.select}>
 				{label && <span className={s.select__label}>{label}</span>}
-				<SelectInput {...props} ref={ref} styles={styles} />
+				<SelectInput
+					{...props}
+					ref={ref}
+					styles={styles}
+					classNamePrefix="react-select"
+					theme={theme => ({
+						...theme,
+						colors: {
+							...theme.colors,
+							primary25: 'rgba(6, 70, 254, 0.2)',
+							primary: 'var(--primary-color)',
+						},
+					})}
+				/>
 				{error && <span className={s.select__error}>{error}</span>}
 			</label>
 		)
@@ -34,7 +47,7 @@ const styles: StylesConfig = {
 	}),
 	input: styles => ({ ...styles }),
 	placeholder: styles => ({ ...styles }),
-	singleValue: (styles, { data }) => ({ ...styles }),
+	singleValue: (styles, { data }) => ({ ...styles, color: 'var(--text-9)' }),
 }
 
 export default Select

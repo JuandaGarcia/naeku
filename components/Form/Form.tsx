@@ -190,6 +190,7 @@ const Form = () => {
 												({ value }) => value === 'Colombia'
 											)}
 											options={countries}
+											placeholder="Seleccione un país"
 											onChange={newValue => {
 												const { value } = newValue as Option
 												onChange(value)
@@ -282,6 +283,7 @@ const Form = () => {
 											ref={ref}
 											name={name}
 											label="Idioma principal"
+											placeholder="Seleccione un idioma"
 											defaultValue={languages.find(
 												({ value }) => value === 'Español'
 											)}

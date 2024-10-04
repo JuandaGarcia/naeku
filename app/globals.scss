@@ -1,6 +1,33 @@
 :root {
 	--primary-color: #0646fe;
 	--background: #f6f9ff;
+	--text-1: #f6f9ff;
+	--text-2: #011243;
+	--text-3: #242731;
+	--text-4: #171c54;
+	--text-5: #171c26;
+	--text-6: #0646fe;
+	--text-7: #021a5e;
+	--text-8: #333333;
+	--text-9: #71839b;
+	--color-1: #eff4ff;
+	--color-2: #e8ebf0;
+	--color-3: #dbe5fe;
+}
+
+[data-theme='dark'] {
+	--background: #010c2d;
+	--text-2: #f6f9ff;
+	--text-3: #f6f9ff;
+	--text-4: #f6f9ff;
+	--text-5: #f6f9ff;
+	--text-6: #f6f9ff;
+	--text-7: #f6f9ff;
+	--text-8: #f6f9ff;
+	--text-9: #9ba8b9;
+	--color-1: #1f346b;
+	--color-2: #0b1639;
+	--color-3: #35446b;
 }
 
 html,
@@ -30,10 +57,14 @@ button {
 }
 
 a:focus-visible,
-input:focus-visible,
-button:focus-visible {
+input:focus-visible {
 	outline: none;
 	box-shadow: 0 0 0 2px var(--primary-color);
+	transition: 0.2s;
+}
+button:focus-visible {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--text-2);
 	transition: 0.2s;
 }
 
@@ -45,4 +76,16 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb {
 	background: var(--primary-color);
 	border-radius: 1rem;
+}
+
+.react-select__indicator-separator {
+	display: none;
+}
+
+.react-select__menu-list {
+	background-color: var(--color-1);
+}
+
+.react-select__option {
+	border-radius: 4px;
 }
