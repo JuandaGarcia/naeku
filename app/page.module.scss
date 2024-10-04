@@ -3,10 +3,10 @@
 .home {
 	display: grid;
 	min-height: 100vh;
-	grid-template-columns: auto 1fr;
 	background-color: var(--background);
 	@include desktop {
 		padding-right: 20px;
+		grid-template-columns: auto 1fr;
 	}
 	&__main {
 		display: grid;
@@ -15,7 +15,9 @@
 		min-height: 100vh;
 		margin: 0 auto;
 		padding: 40px 20px;
+		padding-top: 0;
 		@include desktop {
+			padding: 40px 20px;
 			grid-template-columns: 305px 1fr;
 		}
 		&__content {

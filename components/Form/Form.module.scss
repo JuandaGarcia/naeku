@@ -1,5 +1,49 @@
 @import '../../styles/responsive';
 
+.tabs {
+	display: flex;
+	&__button {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		height: 28px;
+		padding: 0 24px;
+		position: relative;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: #71839b;
+		transition: 0.2s;
+		&.active {
+			color: var(--primary-color);
+			font-weight: 700;
+			& .tabs__button__text {
+				color: inherit !important;
+				border-bottom: none !important;
+			}
+		}
+		&:hover {
+			& .tabs__button__text {
+				color: #171c26;
+				border-bottom: 1px solid #171c26;
+			}
+		}
+		&__text {
+			height: 100%;
+		}
+		&__line {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: var(--primary-color);
+		}
+	}
+}
+
 .form {
 	display: grid;
 	gap: 24px;

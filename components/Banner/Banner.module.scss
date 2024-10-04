@@ -58,6 +58,11 @@
 		position: relative;
 		z-index: 1;
 		@include cta-color-item(0.4);
+		&:focus-visible {
+			outline: none;
+			box-shadow: 0 0 0 2px var(--background);
+			transition: 0.2s;
+		}
 		&::before {
 			content: '';
 			display: block;
@@ -70,7 +75,8 @@
 			left: 0;
 			@include cta-color-item(0.6);
 		}
-		&:hover {
+		&:hover,
+		&:focus-visible {
 			&::before {
 				width: 100%;
 			}

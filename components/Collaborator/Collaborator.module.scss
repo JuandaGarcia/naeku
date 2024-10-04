@@ -3,7 +3,8 @@
 
 .collaborator {
 	position: relative;
-	&:hover {
+	&:hover,
+	&:focus {
 		& .collaborator__info {
 			@include desktop {
 				display: grid;

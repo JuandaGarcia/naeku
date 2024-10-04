@@ -18,8 +18,8 @@ const Nav = () => {
 	const toggleMenu = () => setIsOpen(!isOpen)
 
 	return (
-		<nav className={`${s.nav} ${isOpen && s.open}`}>
-			<div className={s.nav__section}>
+		<>
+			<header className={s.header}>
 				<div className={s.nav__section__btn_logo}>
 					<button
 						className={s.nav__section__btn_logo__button}
@@ -31,44 +31,60 @@ const Nav = () => {
 						<Logo />
 					</Link>
 				</div>
-				<Link href="/" className={s.nav__section__item}>
-					<Home /> <span className={s.hide}>Home</span>
-				</Link>
-				<Link href="/#new-track" className={s.nav__section__item}>
-					<Add /> <span className={s.hide}>Nuevo lanzamiento</span>
-				</Link>
-				<Link href="/#wallet" className={s.nav__section__item}>
-					<Wallet /> <span className={s.hide}>Estado de cuenta</span>
-				</Link>
-				<Link href="/#statistics" className={s.nav__section__item}>
-					<Statistics /> <span className={s.hide}>Ver estadísticas</span>
-				</Link>
-			</div>
-			<div className={s.nav__section}>
-				<Link href="/#help" className={s.nav__section__item}>
-					<Question /> <span className={s.hide}>Centro de ayuda</span>
-				</Link>
-				<button className={s.nav__section__item}>
-					<Sun /> <span className={s.hide}>Cambiar a modo oscuro</span>
-				</button>
-				<button className={s.nav__section__item}>
-					<Exit /> <span className={s.hide}>Salir</span>
-				</button>
-				<Link
-					href="/#profile"
-					className={`${s.nav__section__item} ${s.active}`}
-				>
-					<img
-						src="/img/paola_jara.png"
-						alt="Imagen de Paola Jara"
-						width={25}
-						height={25}
-						className={s.nav__section__item__photo}
-					/>
-					<span className={s.hide}>Perfil</span>
-				</Link>
-			</div>
-		</nav>
+			</header>
+			{isOpen && <div className={s.overlay} onClick={toggleMenu} />}
+			<nav className={`${s.nav} ${isOpen && s.open}`}>
+				<div className={s.nav__section}>
+					<div className={s.nav__section__btn_logo}>
+						<button
+							className={s.nav__section__btn_logo__button}
+							onClick={toggleMenu}
+						>
+							<Menu />
+						</button>
+						<Link href="/" className={s.hide}>
+							<Logo />
+						</Link>
+					</div>
+					<Link href="/" className={s.nav__section__item}>
+						<Home /> <span className={s.hide}>Home</span>
+					</Link>
+					<Link href="/#new-track" className={s.nav__section__item}>
+						<Add /> <span className={s.hide}>Nuevo lanzamiento</span>
+					</Link>
+					<Link href="/#wallet" className={s.nav__section__item}>
+						<Wallet /> <span className={s.hide}>Estado de cuenta</span>
+					</Link>
+					<Link href="/#statistics" className={s.nav__section__item}>
+						<Statistics /> <span className={s.hide}>Ver estadísticas</span>
+					</Link>
+				</div>
+				<div className={s.nav__section}>
+					<Link href="/#help" className={s.nav__section__item}>
+						<Question /> <span className={s.hide}>Centro de ayuda</span>
+					</Link>
+					<button className={s.nav__section__item}>
+						<Sun /> <span className={s.hide}>Cambiar a modo oscuro</span>
+					</button>
+					<button className={s.nav__section__item}>
+						<Exit /> <span className={s.hide}>Salir</span>
+					</button>
+					<Link
+						href="/#profile"
+						className={`${s.nav__section__item} ${s.active}`}
+					>
+						<img
+							src="/img/paola_jara.png"
+							alt="Imagen de Paola Jara"
+							width={25}
+							height={25}
+							className={s.nav__section__item__photo}
+						/>
+						<span className={s.hide}>Perfil</span>
+					</Link>
+				</div>
+			</nav>
+		</>
 	)
 }
 

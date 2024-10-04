@@ -10,7 +10,7 @@ type Props = {
 }
 const Collaborator = ({ photo, name, tracks }: Props) => {
 	return (
-		<div className={s.collaborator}>
+		<div className={s.collaborator} tabIndex={0}>
 			<div className={s.collaborator__profile}>
 				<div className={s.collaborator__profile__photo}>
 					<img
