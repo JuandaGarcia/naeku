@@ -12,6 +12,9 @@ export const metadata: Metadata = {
 	title: 'Naeku by YT Rocket',
 	description:
 		'Lanza tu música sin costos ocultos, con soporte especializado y distribúyela para que suene en todo el mundo.',
+	openGraph: {
+		images: 'https://naeku.juanda.co/img/og.jpg',
+	},
 }
 
 export default function RootLayout({
