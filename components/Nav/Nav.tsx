@@ -28,6 +28,7 @@ const Nav = () => {
 					<button
 						className={s.nav__section__btn_logo__button}
 						onClick={toggleMenu}
+						aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
 					>
 						<Menu />
 					</button>
@@ -46,39 +47,64 @@ const Nav = () => {
 						>
 							<Menu />
 						</button>
-						<Link href="/" className={s.hide}>
+						<Link href="/" className={s.hide} aria-label="Ir a inicio">
 							<Logo />
 						</Link>
 					</div>
-					<Link href="/" className={s.nav__section__item}>
+					<Link
+						href="/"
+						className={s.nav__section__item}
+						aria-label="Ir a inicio"
+					>
 						<Home /> <span className={s.hide}>Home</span>
 					</Link>
-					<Link href="/#new-track" className={s.nav__section__item}>
+					<Link
+						href="/#new-track"
+						className={s.nav__section__item}
+						aria-label="Nuevo lanzamiento"
+					>
 						<Add /> <span className={s.hide}>Nuevo lanzamiento</span>
 					</Link>
-					<Link href="/#wallet" className={s.nav__section__item}>
+					<Link
+						href="/#wallet"
+						className={s.nav__section__item}
+						aria-label="Estado de cuenta"
+					>
 						<Wallet /> <span className={s.hide}>Estado de cuenta</span>
 					</Link>
-					<Link href="/#statistics" className={s.nav__section__item}>
+					<Link
+						href="/#statistics"
+						className={s.nav__section__item}
+						aria-label="Ver estadísticas"
+					>
 						<Statistics /> <span className={s.hide}>Ver estadísticas</span>
 					</Link>
 				</div>
 				<div className={s.nav__section}>
-					<Link href="/#help" className={s.nav__section__item}>
+					<Link
+						href="/#help"
+						className={s.nav__section__item}
+						aria-label="Centro de ayuda"
+					>
 						<Question /> <span className={s.hide}>Centro de ayuda</span>
 					</Link>
-					<button className={s.nav__section__item} onClick={toggleTheme}>
+					<button
+						className={s.nav__section__item}
+						onClick={toggleTheme}
+						aria-label="Cambiar tema"
+					>
 						<Sun />{' '}
 						<span className={s.hide}>
 							Cambiar a modo {theme === 'dark' ? 'claro' : 'oscuro'}
 						</span>
 					</button>
-					<button className={s.nav__section__item}>
+					<button className={s.nav__section__item} aria-label="Salir">
 						<Exit /> <span className={s.hide}>Salir</span>
 					</button>
 					<Link
 						href="/#profile"
 						className={`${s.nav__section__item} ${s.active}`}
+						aria-label="Perfil"
 					>
 						<img
 							src="/img/paola_jara.png"
